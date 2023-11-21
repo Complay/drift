@@ -163,7 +163,7 @@ final class SqlTypes {
       return result;
     } else {
       final unixSeconds = read(DriftSqlType.int, sqlValue)!;
-      return DateTime.fromMillisecondsSinceEpoch(unixSeconds * 1000);
+      return DateTime.fromMillisecondsSinceEpoch(unixSeconds * 1000, isUtc: true);
     }
   }
 
