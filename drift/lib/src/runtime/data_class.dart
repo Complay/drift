@@ -224,7 +224,7 @@ class _DefaultValueSerializer extends ValueSerializer {
 
     if (typeList is List<DateTime?>) {
       if (json is int) {
-        return DateTime.fromMillisecondsSinceEpoch(json, isUtc: true) as T;
+        return DateTime.fromMillisecondsSinceEpoch(json) as T;
       } else {
         return DateTime.parse(json.toString()) as T;
       }
